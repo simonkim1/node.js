@@ -1,0 +1,66 @@
+100
+ ㄴ 100: Continue
+ ㄴ 101: Switching Protocols
+
+※ 요청을 받았고, 작업을 진행 중이라는 의미이다.) HTTP/1.0 이후 정의 되어 있지 않아 서버는 클라이언트에게 이 코드를 보내지 않는다.
+
+
+200
+ ㄴ 200: OK
+ ㄴ 201: Created 
+ ㄴ 202: Accepted
+ ㄴ 203: non-Authoritative Information
+ ㄴ 204: No Content
+ ㄴ 205: Reset Content
+ ㄴ 206: Partial Content
+
+※ 요청이 정상적으로 처리 되었을 때 사용 한다.
+
+
+300
+ ㄴ 300: Multiple Choices
+ ㄴ 301: Moved Permanently
+ ㄴ 302: Found
+ ㄴ 303: See Other
+ ㄴ 304: Not Modified
+ ㄴ 305: Use Proxy
+ ㄴ 306: (Unused in version 1.1)
+ ㄴ 307: Temporary Redirect
+
+※ 클라이언트가 Redirection 등의 추가적인 작업을 해야 한다는 의미이다.
+※ 브라우저에서 요청했을 경우 응답을 받은 브라우저는 다른페이지로 Redirection 처리를 하고 작업을 완료 한다.
+    
+
+400
+ ㄴ 400: Bad Request
+ ㄴ 401: Unauthorized
+ ㄴ 402: Payment Required
+ ㄴ 403: Forbidden
+ ㄴ 404: Not Found
+ ㄴ 405: Method Not Allowed
+ ㄴ 406: Not Acceptable
+ ㄴ 407: Proxy Authentication Required
+ ㄴ 408: Request Timeout
+ ㄴ 409: Conflict
+ ㄴ 410: Gone
+ ㄴ 411: Length Required
+ ㄴ 412: Precondition Failed
+ ㄴ 413: Request Entity Too Large
+ ㄴ 414: Request-URI Too Long
+ ㄴ 415: Unsupported Media Type
+ ㄴ 416: Requested Range Not Satisfiable
+ ㄴ 417: Expectation Failed
+
+ ※ 요청이 잘못되었을 때 사용한다. 예를 들어 주소체계가 틀렸거나, 존재하지 않는 페이지를 요청했을 때 사용한다.
+
+
+ 500
+  ㄴ 500: Internal Server Error
+  ㄴ 501: Not Implemented
+  ㄴ 502: Bad Gateway
+  ㄴ 503: Service Unavailable
+  ㄴ 504: Gateway Timeout
+  ㄴ 505: HTTP Version Not Supported
+
+※ 요청은 정상적이지만 서버측 오류로 정상적인 처리가 되지 않았을때 사용한다.
+※ 일반적인 서버오류에 많이 사용된다.
