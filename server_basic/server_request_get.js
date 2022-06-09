@@ -1,7 +1,10 @@
-// 1. GET 요청 처리
-// 주소값을 이용해 요청을 하는 방식이다.
-// 서버로 값을 전달하기 위해서 서버측 주소 끝에 ?(물음표)를 붙이고 key=value 형태로 요청한다.
-// ex) www.naver.com/Post.nhn?postId=123123123?cafeId=987987
+/*
+    http://localhost:8080/?var1=newData&var2=153&var3=testdata2017
+    1. GET 요청 처리
+    주소값을 이용해 요청을 하는 방식이다.
+    서버로 값을 전달하기 위해서 서버측 주소 끝에 ?(물음표)를 붙이고 key=value 형태로 요청한다.
+    ex) www.naver.com/Post.nhn?postId=123123123?cafeId=987987
+*/
 
 const http = require("http");
 const url = require("url");
