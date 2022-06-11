@@ -25,7 +25,10 @@ const server = http.createServer(function(request, response) {
     console.log(`resource path = ${resource}`);
 
     // 리소스에 해당하는 문자열이 아래와 같으면 해당 메세지를 클라이언트에 전달
-    if(resource == '/address'){
+    if(resource == '/') {
+        response.writeHead(200, {'Content-Type':'text/html; charset=utf-8'});
+        response.end('메인 페이지 입니다.');
+    } else if(resource == '/address'){
         response.writeHead(200, {'Content-Type':'text/html; charset=utf-8'});
         response.end('서울특별시 강남구 논현1동 111');
       }else if(resource == '/phone'){
@@ -34,7 +37,7 @@ const server = http.createServer(function(request, response) {
       }else if(resource == '/name'){
         response.writeHead(200, {'Content-Type':'text/html; charset=utf-8'});
         response.end('Hong Gil Dong');
-      }else{
+      } else{
         response.writeHead(404, {'Content-Type':'text/html; charset=utf-8'});
         response.end('404 Page Not Found');
       }
@@ -45,7 +48,7 @@ server.listen(8080, function(){
 });
 
 /*
-    http://localhost:8080 으로 호출하게 되면 "404 Page Not Found" 이다.
-    요청한 자원이 소스코드에서 정의한 [ /address, /phone, /name ] 문자열에 해당 되지 않기 때문이다.
-    
+    http://localhost:8080/note 와 같이 요청한 자원이 소스코드에서 정의한 [ "/" "/address", "/phone", "/name" ]
+    문자열에 해당 되지 않으면 "404 Page Not Found" 이다.
+
 */
